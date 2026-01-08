@@ -1,16 +1,39 @@
-# React + Vite
+# Smart Issue Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional and interactive issue tracking web application built using **React + Tailwind CSS + Firebase (Auth + Firestore)**.  
+It allows users to **signup, login, create issues, and view them in real-time** with smart features like **similar issue detection** and **status rules**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔹 Tech Stack
 
-## React Compiler
+- **Frontend:** React + Tailwind CSS + Vite  
+- **Backend / Database:** Firebase Firestore  
+- **Authentication:** Firebase Auth (Email/Password)  
+- **Hosting:** Vercel  
+- **AI Tools:** Optional (not used)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Why React + Tailwind + Vite?**  
+- Fast development, lightweight, modern frontend  
+- Tailwind gives responsive, clean, professional UI  
+- Firebase easy to integrate with React + real-time updates  
+- Vercel for hassle-free deployment
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔹 Firestore Data Structure
+
+**Collection:** `issues`  
+**Document Fields:**
+
+```json
+{
+  "title": "Issue title",
+  "description": "Issue description",
+  "priority": "Low | Medium | High",
+  "status": "Open | In Progress | Done",
+  "assignedTo": "user email",
+  "createdBy": "user email",
+  "createdAt": "timestamp"
+}
+
